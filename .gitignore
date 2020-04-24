@@ -1,0 +1,10 @@
+**/main
+*.i
+*.o
+*.s
+*.out
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.log
