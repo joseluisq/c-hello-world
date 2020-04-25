@@ -1,9 +1,10 @@
-# CLang Samples
+# CLang Code Examples
 
-> Some code examples [CLang](https://en.wikipedia.org/wiki/C_(programming_language)).
+> Some code examples to playaround with [CLang](https://en.wikipedia.org/wiki/C_(programming_language)) and reusing its code from other languages.
 
 ## Usage
 
 ```sh
-make clang
+make clang-run
+make cpp-run
 ```
