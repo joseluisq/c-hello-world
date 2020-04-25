@@ -34,3 +34,8 @@ char *decimal_to_binary(int n)
 
 	return ptr;
 }
+
+void decimal_to_binary_end(char *ptr)
+{
+	free(ptr);
+}

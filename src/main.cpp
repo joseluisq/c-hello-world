@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cstdio>
 #include "../lib/decimal_to_binary.h"
 
 int main()
 {
 	int num;
 
-	printf("Decimal to binary (CLang)\n");
+	printf("Decimal to binary (C++)\n");
 	printf("Enter an integer in decimal number system: ");
 	scanf("%d", &num);
 
