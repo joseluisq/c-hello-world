@@ -1,3 +1,9 @@
+ifeq ($(shell uname),Darwin)
+    LDFLAGS := -Wl,-dead_strip
+else
+    LDFLAGS := -Wl,--gc-sections -lpthread -ldl
+endif
+
 # CLang
 clang-run: clang-build
 	@./src/main
@@ -5,7 +11,7 @@ clang-run: clang-build
 
 clang-build:
 	@cd src \
-		&& gcc -Wall -Werror -o main main.c \
+		&& gcc $(LDFLAGS) -o main main.c \
 			../lib/decimal_to_binary.c
 .PHONY: clang-build
 
@@ -16,7 +22,7 @@ cpp-run: cpp-build
 
 cpp-build:
 	@cd src \
-		&& g++ -Wall -Werror -o main main.cpp \
+		&& g++ $(LDFLAGS) -o main main.cpp \
 			../lib/decimal_to_binary.c
 .PHONY: cpp-build
 
